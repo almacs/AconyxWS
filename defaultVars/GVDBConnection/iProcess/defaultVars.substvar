@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>ConnPool</name>
+			<value>10</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>DBURL</name>
+			<value>jdbc:tibcosoftwareinc:oracle://172.26.50.85:1530;SID=UTIBIP01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Password</name>
+			<value>swprouat</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>UserName</name>
+			<value>swpro</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

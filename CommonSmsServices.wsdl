@@ -1,0 +1,388 @@
+<?xml version='1.0' encoding='UTF-8'?><wsdl:definitions name="CommonSmsServices" targetNamespace="http://common.webservice.sms.ngin.agnity.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://common.webservice.sms.ngin.agnity.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://common.webservice.sms.ngin.agnity.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--
+	<import namespace="http://common.webservice.sms.ngin.agnity.com/" schemaLocation="http://10.6.150.86:8003/common-ws/CommonSmsServices/CommonSmsServices?xsd=CommonSmsServices_schema1.xsd" />
+	-->
+	<import namespace="http://common.webservice.sms.ngin.agnity.com/" schemaLocation="CommonSmsServices.xsd" />
+</schema>
+  </wsdl:types>
+  <wsdl:message name="createOrganizationAccountResponse">
+    <wsdl:part element="tns:createOrganizationAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createUnitOfWorkResponse">
+    <wsdl:part element="tns:createUnitOfWorkResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUnPublishedUowListResponse">
+    <wsdl:part element="tns:getUnPublishedUowListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOrganizationAccount">
+    <wsdl:part element="tns:updateOrganizationAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="releaseUOWFromSessionResponse">
+    <wsdl:part element="tns:releaseUOWFromSessionResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subscribeServiceResponse">
+    <wsdl:part element="tns:subscribeServiceResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrganizationList">
+    <wsdl:part element="tns:getOrganizationList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUOWStatusOnGCResponse">
+    <wsdl:part element="tns:getUOWStatusOnGCResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteOrganizationAccountResponse">
+    <wsdl:part element="tns:deleteOrganizationAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUOWStatusOnGC">
+    <wsdl:part element="tns:getUOWStatusOnGC" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectUnitOfWork">
+    <wsdl:part element="tns:selectUnitOfWork" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="updateOrganizationAccountResponse">
+    <wsdl:part element="tns:updateOrganizationAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPublishedUOWStatusResponse">
+    <wsdl:part element="tns:getPublishedUOWStatusResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutUser">
+    <wsdl:part element="tns:logoutUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="publishUnitOfWork">
+    <wsdl:part element="tns:publishUnitOfWork" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUnitOfWork">
+    <wsdl:part element="tns:deleteUnitOfWork" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createOrganizationAccount">
+    <wsdl:part element="tns:createOrganizationAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="authenticateUserResponse">
+    <wsdl:part element="tns:authenticateUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="releaseUOWFromSession">
+    <wsdl:part element="tns:releaseUOWFromSession" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrganizationAccount">
+    <wsdl:part element="tns:getOrganizationAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="createUnitOfWork">
+    <wsdl:part element="tns:createUnitOfWork" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="authenticateUser">
+    <wsdl:part element="tns:authenticateUser" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrganizationListResponse">
+    <wsdl:part element="tns:getOrganizationListResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getOrganizationAccountResponse">
+    <wsdl:part element="tns:getOrganizationAccountResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="publishUnitOfWorkResponse">
+    <wsdl:part element="tns:publishUnitOfWorkResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="subscribeService">
+    <wsdl:part element="tns:subscribeService" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteOrganizationAccount">
+    <wsdl:part element="tns:deleteOrganizationAccount" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="logoutUserResponse">
+    <wsdl:part element="tns:logoutUserResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="selectUnitOfWorkResponse">
+    <wsdl:part element="tns:selectUnitOfWorkResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="deleteUnitOfWorkResponse">
+    <wsdl:part element="tns:deleteUnitOfWorkResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getUnPublishedUowList">
+    <wsdl:part element="tns:getUnPublishedUowList" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="getPublishedUOWStatus">
+    <wsdl:part element="tns:getPublishedUOWStatus" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="CommonSmsServices">
+    <wsdl:operation name="authenticateUser">
+      <wsdl:input message="tns:authenticateUser" name="authenticateUser">
+    </wsdl:input>
+      <wsdl:output message="tns:authenticateUserResponse" name="authenticateUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishUnitOfWork">
+      <wsdl:input message="tns:publishUnitOfWork" name="publishUnitOfWork">
+    </wsdl:input>
+      <wsdl:output message="tns:publishUnitOfWorkResponse" name="publishUnitOfWorkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnPublishedUowList">
+      <wsdl:input message="tns:getUnPublishedUowList" name="getUnPublishedUowList">
+    </wsdl:input>
+      <wsdl:output message="tns:getUnPublishedUowListResponse" name="getUnPublishedUowListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUnitOfWork">
+      <wsdl:input message="tns:deleteUnitOfWork" name="deleteUnitOfWork">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteUnitOfWorkResponse" name="deleteUnitOfWorkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublishedUOWStatus">
+      <wsdl:input message="tns:getPublishedUOWStatus" name="getPublishedUOWStatus">
+    </wsdl:input>
+      <wsdl:output message="tns:getPublishedUOWStatusResponse" name="getPublishedUOWStatusResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrganizationAccount">
+      <wsdl:input message="tns:createOrganizationAccount" name="createOrganizationAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:createOrganizationAccountResponse" name="createOrganizationAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="releaseUOWFromSession">
+      <wsdl:input message="tns:releaseUOWFromSession" name="releaseUOWFromSession">
+    </wsdl:input>
+      <wsdl:output message="tns:releaseUOWFromSessionResponse" name="releaseUOWFromSessionResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createUnitOfWork">
+      <wsdl:input message="tns:createUnitOfWork" name="createUnitOfWork">
+    </wsdl:input>
+      <wsdl:output message="tns:createUnitOfWorkResponse" name="createUnitOfWorkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrganizationAccount">
+      <wsdl:input message="tns:deleteOrganizationAccount" name="deleteOrganizationAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:deleteOrganizationAccountResponse" name="deleteOrganizationAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logoutUser">
+      <wsdl:input message="tns:logoutUser" name="logoutUser">
+    </wsdl:input>
+      <wsdl:output message="tns:logoutUserResponse" name="logoutUserResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationList">
+      <wsdl:input message="tns:getOrganizationList" name="getOrganizationList">
+    </wsdl:input>
+      <wsdl:output message="tns:getOrganizationListResponse" name="getOrganizationListResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationAccount">
+      <wsdl:input message="tns:getOrganizationAccount" name="getOrganizationAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:getOrganizationAccountResponse" name="getOrganizationAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subscribeService">
+      <wsdl:input message="tns:subscribeService" name="subscribeService">
+    </wsdl:input>
+      <wsdl:output message="tns:subscribeServiceResponse" name="subscribeServiceResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrganizationAccount">
+      <wsdl:input message="tns:updateOrganizationAccount" name="updateOrganizationAccount">
+    </wsdl:input>
+      <wsdl:output message="tns:updateOrganizationAccountResponse" name="updateOrganizationAccountResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUOWStatusOnGC">
+      <wsdl:input message="tns:getUOWStatusOnGC" name="getUOWStatusOnGC">
+    </wsdl:input>
+      <wsdl:output message="tns:getUOWStatusOnGCResponse" name="getUOWStatusOnGCResponse">
+    </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectUnitOfWork">
+      <wsdl:input message="tns:selectUnitOfWork" name="selectUnitOfWork">
+    </wsdl:input>
+      <wsdl:output message="tns:selectUnitOfWorkResponse" name="selectUnitOfWorkResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CommonSmsServicesSoapBinding" type="tns:CommonSmsServices">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="authenticateUser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="authenticateUser">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="authenticateUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishUnitOfWork">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="publishUnitOfWork">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="publishUnitOfWorkResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUnPublishedUowList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getUnPublishedUowList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getUnPublishedUowListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteUnitOfWork">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteUnitOfWork">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteUnitOfWorkResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPublishedUOWStatus">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getPublishedUOWStatus">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getPublishedUOWStatusResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createOrganizationAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createOrganizationAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createOrganizationAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="releaseUOWFromSession">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="releaseUOWFromSession">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="releaseUOWFromSessionResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="createUnitOfWork">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createUnitOfWork">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createUnitOfWorkResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteOrganizationAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteOrganizationAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteOrganizationAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="logoutUser">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="logoutUser">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="logoutUserResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getOrganizationAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getOrganizationAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getOrganizationList">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getOrganizationList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getOrganizationListResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="subscribeService">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="subscribeService">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="subscribeServiceResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getUOWStatusOnGC">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="getUOWStatusOnGC">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="getUOWStatusOnGCResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="updateOrganizationAccount">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="updateOrganizationAccount">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="updateOrganizationAccountResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="selectUnitOfWork">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="selectUnitOfWork">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="selectUnitOfWorkResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CommonSmsServices">
+    <wsdl:port binding="tns:CommonSmsServicesSoapBinding" name="CommonSmsServicesPort">
+      <soap:address location="http://labserver1:8003/common-ws/CommonSmsServices/CommonSmsServices" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

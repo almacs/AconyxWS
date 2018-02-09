@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>NewFlatFiles</name>
+			<value>/tibco_uat/app/tibco/tibcoesb/bwlogs/TibcoFiles/Asap/WTNNoAlestra/NewFlatFiles</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>OldFlatFiles</name>
+			<value>/tibco_uat/app/tibco/tibcoesb/bwlogs/TibcoFiles/Asap/WTNNoAlestra/OldFlatFiles</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>PollingInterval</name>
+			<value>60</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

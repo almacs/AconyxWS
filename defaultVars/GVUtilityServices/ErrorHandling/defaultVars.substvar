@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>CopaaSource</name>
+			<value>OM</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>JMSPassword</name>
+			<value></value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>JMSUserName</name>
+			<value>admin</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>ProviderURL</name>
+			<value>tcp://172.26.50.85:31201</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>QueueError</name>
+			<value>EHF.Error.01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>JNDIURL</name>
+			<value>tibjmsnaming://172.26.50.85:31201</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Password</name>
+			<value>ACONYX01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>ProviderURL</name>
+			<value>tcp://172.26.50.85:31201</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>UserName</name>
+			<value>ACONYX</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

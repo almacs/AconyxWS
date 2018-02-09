@@ -1,0 +1,53 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>Add</name>
+			<value>Add</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721227</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Block</name>
+			<value>Block</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721227</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Disconnect</name>
+			<value>Disconnect</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721227</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Modify</name>
+			<value>Modify</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721228</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Unblock</name>
+			<value>Unblock</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721229</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>VtaAutomatica</name>
+			<value>Venta Automatica</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721241</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>HTTPHostName</name>
+			<value>tibuat01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721231</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>HTTPPort</name>
+			<value>12356</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>IpAddress</name>
+			<value>172.26.50.85</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721240</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

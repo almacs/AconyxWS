@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>JNDIURL</name>
+			<value>t3://147.1.14.38:7301</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Password</name>
+			<value>tata_tibco</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>QueueConnectionFactory</name>
+			<value>com.MetaSolv.Security.QueueConnectionFactory</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>TopicConnectionFactory</name>
+			<value>System.DV03.ApplicationType.ServiceActivation.Application.1-0;4-6;ASAP.Comp.TopicConnectionFactory</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>UserName</name>
+			<value>tata_tibco</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

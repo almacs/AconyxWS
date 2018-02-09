@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>ErrorQueue</name>
+			<value>EHF.Error.01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>JNDIURL</name>
+			<value>tibjmsnaming://172.26.50.85:31201</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721234</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>Password</name>
+			<value>ehf</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721235</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>URL</name>
+			<value>tcp://172.26.50.85:31201</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721235</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>User</name>
+			<value>EHF</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721235</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>parentAccountNumber</name>
+			<value>41033</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721225</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>password</name>
+			<value>generico</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721225</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>userId</name>
+			<value>tibco@alestraatf.net.mx</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721225</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>userIdAccountNumber</name>
+			<value>41201</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721226</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

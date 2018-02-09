@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>ParentAccountNo</name>
+			<value>3058</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>Integer</type>
+			<modTime>1476296721240</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>password</name>
+			<value>1234abcd</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721239</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>user</name>
+			<value>tibco@postpago.alestra.net.mx</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721239</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

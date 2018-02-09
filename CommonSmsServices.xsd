@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8'?><xs:schema elementFormDefault="unqualified" targetNamespace="http://common.webservice.sms.ngin.agnity.com/" version="1.0" xmlns:tns="http://common.webservice.sms.ngin.agnity.com/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+<xs:element name="Response" type="tns:wsGenericObject" />
+<xs:element name="authenticateUser" type="tns:authenticateUser" />
+<xs:element name="authenticateUserResponse" type="tns:authenticateUserResponse" />
+<xs:element name="createOrganizationAccount" type="tns:createOrganizationAccount" />
+<xs:element name="createOrganizationAccountResponse" type="tns:createOrganizationAccountResponse" />
+<xs:element name="createUnitOfWork" type="tns:createUnitOfWork" />
+<xs:element name="createUnitOfWorkResponse" type="tns:createUnitOfWorkResponse" />
+<xs:element name="deleteOrganizationAccount" type="tns:deleteOrganizationAccount" />
+<xs:element name="deleteOrganizationAccountResponse" type="tns:deleteOrganizationAccountResponse" />
+<xs:element name="deleteUnitOfWork" type="tns:deleteUnitOfWork" />
+<xs:element name="deleteUnitOfWorkResponse" type="tns:deleteUnitOfWorkResponse" />
+<xs:element name="getOrganizationAccount" type="tns:getOrganizationAccount" />
+<xs:element name="getOrganizationAccountResponse" type="tns:getOrganizationAccountResponse" />
+<xs:element name="getOrganizationList" type="tns:getOrganizationList" />
+<xs:element name="getOrganizationListResponse" type="tns:getOrganizationListResponse" />
+<xs:element name="getPublishedUOWStatus" type="tns:getPublishedUOWStatus" />
+<xs:element name="getPublishedUOWStatusResponse" type="tns:getPublishedUOWStatusResponse" />
+<xs:element name="getUOWStatusOnGC" type="tns:getUOWStatusOnGC" />
+<xs:element name="getUOWStatusOnGCResponse" type="tns:getUOWStatusOnGCResponse" />
+<xs:element name="getUnPublishedUowList" type="tns:getUnPublishedUowList" />
+<xs:element name="getUnPublishedUowListResponse" type="tns:getUnPublishedUowListResponse" />
+<xs:element name="logoutUser" type="tns:logoutUser" />
+<xs:element name="logoutUserResponse" type="tns:logoutUserResponse" />
+<xs:element name="publishUnitOfWork" type="tns:publishUnitOfWork" />
+<xs:element name="publishUnitOfWorkResponse" type="tns:publishUnitOfWorkResponse" />
+<xs:element name="releaseUOWFromSession" type="tns:releaseUOWFromSession" />
+<xs:element name="releaseUOWFromSessionResponse" type="tns:releaseUOWFromSessionResponse" />
+<xs:element name="selectUnitOfWork" type="tns:selectUnitOfWork" />
+<xs:element name="selectUnitOfWorkResponse" type="tns:selectUnitOfWorkResponse" />
+<xs:element name="subscribeService" type="tns:subscribeService" />
+<xs:element name="subscribeServiceResponse" type="tns:subscribeServiceResponse" />
+<xs:element name="updateOrganizationAccount" type="tns:updateOrganizationAccount" />
+<xs:element name="updateOrganizationAccountResponse" type="tns:updateOrganizationAccountResponse" />
+<xs:complexType name="authenticateUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthInfo" type="tns:authInfo" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="authInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UserId" type="xs:string" />
+          <xs:element minOccurs="0" name="Password" type="xs:string" />
+          <xs:element minOccurs="0" name="LanguageCode" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType abstract="true" name="wsGenericObject">
+    <xs:sequence />
+  </xs:complexType>
+<xs:complexType name="authenticateUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="wsResponse">
+    <xs:sequence>
+      <xs:element name="SuccessFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="Success" type="tns:success" />
+      <xs:element minOccurs="0" name="Error" type="tns:error" />
+      <xs:element minOccurs="0" name="PartialFailure">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="Failed" type="tns:failed" />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element minOccurs="0" name="Response" type="tns:wsGenericObject" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="success">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="SuccessMessage" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="error">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Code" type="xs:string" />
+      <xs:element minOccurs="0" name="Message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="failed">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Element" type="xs:string" />
+      <xs:element minOccurs="0" name="Error" type="tns:error" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractCollection">
+    <xs:sequence />
+  </xs:complexType>
+<xs:complexType abstract="true" name="abstractList">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractCollection">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="arrayList">
+    <xs:complexContent>
+      <xs:extension base="tns:abstractList">
+        <xs:sequence />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="publishUnitOfWork">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UowJob" type="tns:uowJob" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="uowJob">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+          <xs:element minOccurs="0" name="Priority" type="xs:string" />
+          <xs:element minOccurs="0" name="ScheduledTime" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="publishUnitOfWorkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getUnPublishedUowList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnPublishedUowList" type="tns:unPublishedUowList" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="unPublishedUowList">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="NonPublishedUowList">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="Uow" type="tns:uow" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+          <xs:element minOccurs="0" name="LoginUserAccountNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="uow">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="WorkId" type="xs:long" />
+          <xs:element minOccurs="0" name="WorkName" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:string" />
+          <xs:element minOccurs="0" name="AccountId" type="xs:long" />
+          <xs:element minOccurs="0" name="Description" type="xs:string" />
+          <xs:element minOccurs="0" name="CreatedOn" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="getUnPublishedUowListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteUnitOfWork">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnitOfWork" type="tns:unitOfWork" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="unitOfWork">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="UowName" type="xs:string" />
+          <xs:element minOccurs="0" name="UowDesc" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:long" />
+          <xs:element minOccurs="0" name="ScheduleTime" type="xs:string" />
+          <xs:element minOccurs="0" name="type" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="deleteUnitOfWorkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getPublishedUOWStatus">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UowStatus" type="tns:uowStatus" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="uowStatus">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+          <xs:element minOccurs="0" name="LoginUserAccountNo" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="getPublishedUOWStatusResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createOrganizationAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountInfo" type="tns:accountInfo" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="accountInfo">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Account" type="tns:account" />
+          <xs:element minOccurs="0" name="AddressList">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="Address" type="tns:address" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="account">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="AccountType" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" name="DomainName" type="xs:string" />
+          <xs:element minOccurs="0" name="BusinessUnit" type="xs:string" />
+          <xs:element minOccurs="0" name="ParentAccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="PrimaryLanguageCode" type="xs:long" />
+          <xs:element minOccurs="0" name="SecondaryLanguageCode" type="xs:long" />
+          <xs:element minOccurs="0" name="ActivationDate" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpirationDate" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="address">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="AddressId" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetAddress1" type="xs:string" />
+          <xs:element minOccurs="0" name="StreetAddress2" type="xs:string" />
+          <xs:element minOccurs="0" name="City" type="xs:string" />
+          <xs:element minOccurs="0" name="State" type="xs:string" />
+          <xs:element minOccurs="0" name="Country" type="xs:string" />
+          <xs:element minOccurs="0" name="Zip" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="createOrganizationAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="releaseUOWFromSession">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnitOfWork" type="tns:unitOfWork" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="releaseUOWFromSessionResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createUnitOfWork">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnitOfWork" type="tns:unitOfWork" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="createUnitOfWorkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteOrganizationAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountInfo" type="tns:accountInfo" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="deleteOrganizationAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="logoutUser">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthInfo" type="tns:authInfo" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="logoutUserResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getOrganizationList">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="OrganizationAccountList" type="tns:organizationAccountList" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="organizationAccountList">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="OrganizationAccList">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element maxOccurs="unbounded" minOccurs="0" name="Organization" type="tns:organization" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="organization">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="CustomerId" type="xs:string" />
+          <xs:element minOccurs="0" name="Name" type="xs:string" />
+          <xs:element minOccurs="0" name="Status" type="xs:string" />
+          <xs:element minOccurs="0" name="Type" type="xs:string" />
+          <xs:element minOccurs="0" name="ActivateDate" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpirationDate" type="xs:string" />
+          <xs:element minOccurs="0" name="DomainName" type="xs:string" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="getOrganizationListResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getOrganizationAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountInfo" type="tns:accountInfo" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getOrganizationAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="subscribeService">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Subscription" type="tns:subscription" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="subscription">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="ServiceId" type="xs:long" />
+          <xs:element minOccurs="0" name="Status" type="xs:long" />
+          <xs:element minOccurs="0" name="ParentStatus" type="xs:long" />
+          <xs:element minOccurs="0" name="ChargeNumber" type="xs:string" />
+          <xs:element minOccurs="0" name="ActivationDate" type="xs:string" />
+          <xs:element minOccurs="0" name="ExpirationDate" type="xs:string" />
+          <xs:element minOccurs="0" name="ServiceName" type="xs:string" />
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="subscribeServiceResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateOrganizationAccount">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AccountInfo" type="tns:accountInfo" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="updateOrganizationAccountResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="getUOWStatusOnGC">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UOWDetailList" type="tns:uowDetailList" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="uowDetailList">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="AccountNumber" type="xs:long" />
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+          <xs:element minOccurs="0" name="GCClusterId" type="xs:string" />
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="UOWDetail" type="tns:uowDetail" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="uowDetail">
+    <xs:complexContent>
+      <xs:extension base="tns:wsGenericObject">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="ProvisioningKey" type="xs:string" />
+          <xs:element minOccurs="0" name="GCClusterId" type="xs:string" />
+          <xs:element minOccurs="0" name="PublishTime" type="xs:string" />
+          <xs:element minOccurs="0" name="UowId" type="xs:long" />
+        </xs:sequence>
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+<xs:complexType name="getUOWStatusOnGCResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="selectUnitOfWork">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="UnitOfWork" type="tns:unitOfWork" />
+      <xs:element minOccurs="0" name="SessionId" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+<xs:complexType name="selectUnitOfWorkResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="WSResponse" type="tns:wsResponse" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

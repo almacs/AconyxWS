@@ -1,0 +1,45 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>BUBQueueName</name>
+			<value>VAS.VASBUB.01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721232</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>CXWTNNOALESTRA</name>
+			<value>CXWTNNOALESTRA</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721233</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>RenewUOW</name>
+			<value>RenewUOW.01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721233</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>ServiceOrder</name>
+			<value>OMACONYX.01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721233</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>VoIPBUQueue</name>
+			<value>BUVoIP.01</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721240</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>

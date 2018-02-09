@@ -1,0 +1,37 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<repository xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xmlns = "http://www.tibco.com/xmlns/repo/types/2002">
+	<globalVariables>
+		<globalVariable>
+			<name>ACTIVAR</name>
+			<value>1</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721239</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>BAJA</name>
+			<value>4</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721240</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>BLOQUEO</name>
+			<value>3</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721239</modTime>
+		</globalVariable>
+		<globalVariable>
+			<name>DESBLOQUEO</name>
+			<value>1</value>
+			<deploymentSettable>true</deploymentSettable>
+			<serviceSettable>false</serviceSettable>
+			<type>String</type>
+			<modTime>1476296721239</modTime>
+		</globalVariable>
+	</globalVariables>
+</repository>
